@@ -1,0 +1,110 @@
+/*********************************************************************/
+/* Application Global                                                */
+/* (c) 2017 Peano System Inc.                                        */
+/*********************************************************************/
+/*********************************************************************/
+/* (1) Color Variables                                               */
+/*********************************************************************/
+:root {
+  --text-color:              #000000;
+  --background-color:        #FFFFFF;
+  --main-color:              #000000;
+  --main-assoc-color:        #FFFFFF;
+  --sub-color:               #000000;
+  --sub-assoc-color:         #FFFFFF;
+  --accent-color:            #FFFFFF;
+  --accent-assoc-color:      #DB7093;
+  --highlighted-color:       #FFFFFF;
+  --highlighted-assoc-color: #82B340;
+  --ok-color:                #0000FF;
+  --ng-color:                #FF0000;
+}
+
+/*********************************************************************/
+/* (2) Common Settings                                               */
+/*********************************************************************/
+html {
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  body {
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    font-size: 2rem;
+    a:link,
+    a:visited,
+    a:hover,
+    a:active {
+      color: var(--highlighted-color);
+      text-decoration: none;
+    }
+  }
+  button {
+    color: var(--accent-assoc-color);
+    background-color: var(--accent-color);
+    border: none;
+    font-size: 1.6rem;
+    line-height: 3rem;
+  }
+  button:hover {
+    color: var(--highlighted-assoc-color);
+    background-color: var(--highlighted-color);
+  }
+  .band {
+    > * {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+}
+
+/*********************************************************************/
+/* (3) Indivisual Settings                                           */
+/*********************************************************************/
+/*********************************************************************/
+/* TitleBar                                                          */
+/*********************************************************************/
+.TitleBar {
+  position: relative;
+  background-color: var(--sub-bg-color);
+  color: var(--heading-text-color);
+  padding: 1rem 0;
+  .loginControl {
+    position: absolute;
+    width: 200px;
+    top: 2rem;
+    right: 5%;
+    text-align: right;
+    #btn-login, #btn-logout {
+      width: 10rem;
+      margin-right: 0;
+    }
+  }
+}
+
+/*********************************************************************/
+/* Credit                                                            */
+/*********************************************************************/
+.Credit {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 1rem 0;
+  div {
+    text-align: center;
+  }
+}
+
+/*********************************************************************/
+/* Copyright                                                         */
+/*********************************************************************/
+.Copyright {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  padding: 1rem 0;
+  div {
+    text-align: center;
+  }
+}
+

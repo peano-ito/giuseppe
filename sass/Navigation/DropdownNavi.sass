@@ -1,0 +1,190 @@
+/*********************************************************************/
+/* Dropdown Navigation                                               */
+/* (c) 2017 Peano System Inc.                                        */
+/*********************************************************************/
+/*********************************************************************/
+/* [D1] Fill Rectangle                                               */
+/*********************************************************************/
+.DropdownNavi.D1 {
+  color: var(--main-assoc-color);
+  background-color: var(--main-color);
+  > ul {
+    display: block;
+    text-align: center;
+    ul, li, a {
+      marign: 0;
+      padding: 0;
+      width: 200px;
+      text-align: center;
+      vertical-align: middle;
+      list-style: none;
+    }
+    a {
+      display: inline-block;
+      padding: 1rem 0;
+      line-height: 3rem;
+      color: var(--main-assoc-color);
+      background-color: var(--main-color);
+    }
+    li:hover > a {
+      color: var(--sub-assoc-color);
+      background-color: var(--sub-color);
+    }
+    > li {
+      display: inline-block;
+      > ul {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        opacity: 0;
+        transition: 0.5s;
+        > li {
+          display: none;
+        }
+      }
+    }
+    > li:hover {
+      > ul {
+        opacity: 1;
+        li {
+          display: block;
+        }
+      }
+    }
+    > li.selected, > li > ul > li:hover {
+      > a {
+        color: var(--accent-assoc-color);
+        background-color: var(--accent-color);
+      }
+    }
+  }
+}
+
+/*********************************************************************/
+/* [D2] Both Side Accessory                                          */
+/*********************************************************************/
+.DropdownNavi.D2 {
+  color: var(--main-assoc-color);
+  background-color: var(--main-color);
+  ul, li {
+    display: inline-block;
+    box-sizing: border-box;
+    marign: 0;
+    padding: 0;
+    width: 200px;
+    list-style: none;
+    text-align: center;
+    vertical-align: middle;
+  }
+  li {
+    position: relative;
+    background-color: var(--main-color);
+  }
+  a {
+    display: inline-block;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+    color: var(--main-assoc-color);
+  }
+  a:before {
+    position: absolute;
+    top: 50%;
+    content: '';
+    border-left: 12px solid var(--accent-color);
+    border-right: 12px solid var(--accent-color);
+    left: 0;
+    right: 0;
+    opacity: 0;
+    height: 3px;
+    transition: all 0.35s ease;
+  }
+  > ul {
+    display: block;
+    width: inherit;
+    > li > ul {
+      position: absolute;
+      box-sizing: border-box;
+      padding: 0;
+      display: none;
+    }
+    > li:hover > ul {
+      display: block;
+    }
+    li:hover, li.selected {
+      background-color: var(--sub-color);
+      > a {
+        color: var(--sub-assoc-color);
+      }
+      > a:before {
+        left: -16px;
+        right: -16px;
+        opacity: 1;
+      }
+    }
+  }
+}
+
+/*********************************************************************/
+/* [D3] Fill Rectangle                                               */
+/*********************************************************************/
+.DropdownNavi.D3 {
+  background-color: var(--main-color);
+  > ul {
+    display: block;
+    text-align: center;
+    ul, li, a {
+      marign: 0;
+      padding: 0;
+      width: 200px;
+      text-align: center;
+      vertical-align: middle;
+      list-style: none;
+    }
+    a {
+      display: inline-block;
+      padding: 1rem 0;
+      line-height: 3rem;
+    }
+    li {
+      background-color: var(--main-color);
+      > a {
+        color: var(--main-assoc-color);
+      }
+    }
+    > li {
+      display: inline-block;
+      transition: 0.2s;
+      > ul {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        > li {
+          display: block;
+          overflow: hidden;
+          height: 0;
+          transition: 0.2s;
+        }
+      }
+    }
+    > li:hover {
+      > ul {
+        > li {
+          overflow: visible;
+          height: 5rem;
+        }
+      }
+      background-color: var(--sub-color);
+      > a {
+        color: var(--sub-assoc-color);
+      }
+    }
+    > li.selected, > li > ul > li:hover {
+      background-color: var(--accent-color);
+      > a {
+        color: var(--accent-assoc-color);
+      }
+    }
+  }
+}

@@ -1,0 +1,98 @@
+/*********************************************************************/
+/* Single Navigation                                                 */
+/* (c) 2017 Peano System Inc.                                        */
+/*********************************************************************/
+/*********************************************************************/
+/* [D1] Fill Rectangle                                               */
+/*********************************************************************/
+.SingleNavi.D1 {
+  color: var(--main-assoc-color);
+  background-color: var(--main-color);
+  > ul {
+    display: block;
+    text-align: center;
+    > li {
+      display: inline-block;
+      list-style: none;
+      marign: 0;
+      padding: 0;
+      width: 200px;
+
+      > a {
+        display: inline-block;
+        marign: 0;
+        padding: 1rem 0;
+        width: 200px;
+
+        line-height: 3rem;
+        text-align: center;
+        vertical-align: middle;
+        color: var(--main-assoc-color);
+        background-color: var(--main-color);
+      }
+      > a:hover,
+      > a:active {
+        color: var(--highlighted-assoc-color);
+        background-color: var(--highlighted-color);
+      }
+    }
+    > li.selected {
+      > a {
+        color: var(--accent-assoc-color);
+        background-color: var(--accent-color);
+      }
+    }
+  }
+  * {
+    transition: 1s;
+  }
+}
+
+/*********************************************************************/
+/* [D2] Both Side Accessory                                          */
+/*********************************************************************/
+.SingleNavi.D2 {
+  color: var(--main-assoc-color);
+  background-color: var(--main-color);
+  > ul {
+    display: block;
+    box-sizing: border-box;
+    text-align: center;
+    > li {
+      display: inline-block;
+      list-style: none;
+      width: 200px;
+      padding: 1rem 0;
+      > a {
+        display: inline-block;
+        position: relative;
+        line-height: 3rem;
+        color: var(--main-assoc-color);
+      }
+      > a:before {
+        position: absolute;
+        top: 50%;
+        content: '';
+        border-left: 12px solid var(--accent-color);
+        border-right: 12px solid var(--accent-color);
+        left: 0;
+        right: 0;
+        opacity: 0;
+        height: 3px;
+        transition: all 0.35s ease;
+      }
+    }
+    > li:hover, > li.selected {
+      background-color: var(--sub-color);
+      a {
+        color: var(--sub-assoc-color);
+      }
+      > a:before {
+        left: -16px;
+        right: -16px;
+        opacity: 1;
+      }
+    }
+  }
+}
+

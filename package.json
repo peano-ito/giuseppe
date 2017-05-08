@@ -1,0 +1,32 @@
+{
+  "name": "web-design-proto",
+  "version": "0.0.0",
+  "description": "Web Design Prototype",
+  "main": "index.js",
+  "scripts": {
+    "trans-js": "babel --presets react,es2015 js/source/ -d js/build",
+    "build-js": "browserify js/build/app.js -o bundle.js",
+    "build-css": "cat node_modules/normalize.css/normalize.css sass/*.sass sass/*/*.sass sass/*/*/*.sass | node-sass > bundle.css",
+    "build-all": "npm run trans-js; npm run build-js; npm run build-css"
+  },
+  "repository": "",
+  "author": "A. Ito",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0",
+    "redux-devtools": "^3.4.0"
+  },
+  "dependencies": {
+    "deepcopy": "^0.6.3",
+    "normalize.css": "^6.0.0",
+    "prop-types": "^15.5.8",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.4",
+    "redux": "^3.6.0"
+  },
+  "private": true
+}
