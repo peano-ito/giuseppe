@@ -39,7 +39,7 @@ class StaticPages extends React.Component {
     return(
       <section className="band StaticPages">
         <ul>
-          <li data-screenId="GITHUB"><a href="https://github.com" target="_blank">GitHub</a></li>
+          <li data-screenId="GITHUB"><a href="https://github.com/peano-ito/giuseppe" target="_blank">GitHub</a></li>
           <li data-screenId="DEVELOPER" onClick={dispatch.onLoad}><a href="#">開発者</a></li>
           <li data-screenId="LICENSE" onClick={dispatch.onLoad}><a href="#">ライセンス</a></li>
         </ul>
