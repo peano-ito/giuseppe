@@ -1,7 +1,7 @@
 {
-  "name": "web-design-proto",
+  "name": "giuseppe",
   "version": "0.0.0",
-  "description": "Web Design Prototype",
+  "description": "Web Appli Mockup Design.",
   "main": "index.js",
   "scripts": {
     "trans-js": "babel --presets react,es2015 js/source/ -d js/build",
